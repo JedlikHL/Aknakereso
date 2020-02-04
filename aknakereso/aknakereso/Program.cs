@@ -15,6 +15,9 @@ namespace aknakereso
 
             Console.ReadKey();
         }
-        
+        static void Feltöltés()
+            {
+
+            }
     }
 }
