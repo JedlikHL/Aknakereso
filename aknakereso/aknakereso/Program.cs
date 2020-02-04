@@ -12,12 +12,20 @@ namespace aknakereso
         static void Main(string[] args)
         {
             Feltöltés();
+            Kirajzoló();
 
             Console.ReadKey();
         }
         static void Feltöltés()
-            {
+        {
+                for (int i = 0; i < length; i++)
+			    {
+                    
+			    }
+        }
+        static void Kirajzoló()
+        {
 
-            }
+        }
     }
 }
