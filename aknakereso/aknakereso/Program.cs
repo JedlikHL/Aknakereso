@@ -14,6 +14,7 @@ namespace aknakereso
             char[,] pálya = new char[10, 10];
             Feltöltés(pálya);
             Kirajzoló(pálya);
+            Tippelő(pálya);
 
             Console.ReadKey();
         }
@@ -50,6 +51,29 @@ namespace aknakereso
                 }
                 Console.WriteLine();
             }
+        }
+        static void Tippelő(char[,]pálya)
+        {
+            Console.WriteLine("Kérem a sor tippet 1-10 között:");
+            int sortipp = int.Parse(Console.ReadLine());
+            Console.WriteLine("Kérem az oszlop tippet 1-10 között:");
+            int oszloptipp = int.Parse(Console.ReadLine());
+            for (int i = 0; i < sortipp.Length; i++)
+			{
+               for (int j = 0; j < oszloptipp.Length; j++)
+               {
+                    pálya[i, j] = '_';
+               }
+			}
+            Console.Write("X");
+            for (int i = sortipp; i < pálya.GetLength(0); i++)
+			{
+               for (int j = oszloptipp; j < pálya.GetLength(1); j++)
+               {
+                    pálya[i, j] = '_';
+               }
+			}
+            Kirajzoló(pálya);
         }
     }
 }
