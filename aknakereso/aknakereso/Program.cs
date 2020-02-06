@@ -58,21 +58,17 @@ namespace aknakereso
             int sortipp = int.Parse(Console.ReadLine());
             Console.WriteLine("Kérem az oszlop tippet 1-10 között:");
             int oszloptipp = int.Parse(Console.ReadLine());
-            for (int i = 0; i < sortipp.Length; i++)
-			{
-               for (int j = 0; j < oszloptipp.Length; j++)
-               {
-                    pálya[i, j] = '_';
-               }
-			}
-            Console.Write("X");
-            for (int i = sortipp; i < pálya.GetLength(0); i++)
-			{
-               for (int j = oszloptipp; j < pálya.GetLength(1); j++)
-               {
-                    pálya[i, j] = '_';
-               }
-			}
+            if (sortipp<10 && oszloptipp<10)
+	        {
+                int sor,oszlop;
+                do
+                {
+                    sor = sortipp-1;
+                    oszlop = oszloptipp-1;
+
+                } while (pálya[sor,oszlop]=='X');
+                pálya[sor, oszlop] = 'X';
+	        }
             Kirajzoló(pálya);
         }
     }
