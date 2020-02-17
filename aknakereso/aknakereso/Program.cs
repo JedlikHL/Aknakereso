@@ -20,8 +20,14 @@ namespace Aknakereso_javitott
             do
             {
                 Lépés(pálya, out lépx, out lépy);
-            } while (pálya[lépx, lépy] != 'B' || UnderscoreSzámoló(pálya)>44);
-            Console.WriteLine("Gratulálunk, nyert!");
+            } while (pálya[lépx, lépy] != 'B' && UnderscoreSzámoló(pálya)>44);
+            if (UnderscoreSzámoló(pálya)==44)
+	        {
+                Console.WriteLine("Gratulálunk, nyertél!");
+	        }else
+	        {
+                Console.WriteLine("Felrobbantál!");
+	        }
             Console.ReadKey();
         }
 
